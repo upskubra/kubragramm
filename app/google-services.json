@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908673043630",
+    "project_id": "kubragramm",
+    "storage_bucket": "kubragramm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908673043630:android:41ff1d04cf73298fcef13f",
+        "android_client_info": {
+          "package_name": "com.example.kubragramm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908673043630-slg1t5v7b3922fofo2ouafb4dhcdnpa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMP9dUQpw_yzMZ7ppfuoxwe6Lv1H91dXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908673043630-slg1t5v7b3922fofo2ouafb4dhcdnpa4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
