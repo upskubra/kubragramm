@@ -28,6 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+
+        val currentUser = auth.currentUser // kullanıcı zaten giriş yapmış
+        if (currentUser != null){
+            val intent = Intent(this, FeedActivity::class.java)
+            startActivity(intent)
+            finish()
+
+
+        }
+
         signUpButton.setOnClickListener {
             signUp()
         }
@@ -38,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun signUp(){
+    private fun signUp(){
 
         val email = userText.text.toString()
         val password = passwordText.text.toString()
@@ -61,7 +71,28 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun signIn(){
+    private fun signIn(){
+         val email = userText.text.toString()
+         val password = passwordText.text.toString()
+
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful){
+                         val currentUser = auth.currentUser.email.toString()
+                        Toast.makeText(applicationContext, "hoşgeldiniz $currentUser", Toast.LENGTH_LONG).show()
+
+
+
+                        val intent = Intent(this, FeedActivity::class.java)
+                        startActivity(intent)
+                        finish()
+
+
+                    }
+
+                }.addOnFailureListener { exception ->
+                    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+
+                }
 
     }
 }
