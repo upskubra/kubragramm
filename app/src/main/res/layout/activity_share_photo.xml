@@ -5,47 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#40AF099F"
-    tools:context=".SharePhoto">
+    tools:context=".view.SharePhoto">
 
     <ImageView
         android:id="@+id/addPhotoImageView"
-        android:layout_width="287dp"
-        android:layout_height="281dp"
-        android:layout_marginStart="76dp"
+        android:layout_width="319dp"
+        android:layout_height="0dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="85dp"
-        app:layout_constraintBottom_toTopOf="@+id/commentText"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
-
-    <TextView
-        android:id="@+id/commentText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="56dp"
-        android:hint="yorum griniz..."
-
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/shareButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addPhotoImageView" />
 
     <Button
         android:id="@+id/shareButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="106dp"
+        android:layout_marginBottom="209dp"
         android:text="Paylaş"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="Yorum giriniz.."
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/shareButton"
+        app:layout_constraintStart_toStartOf="@+id/addPhotoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/addPhotoImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
