@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#40AF099F"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
     tools:context=".view.SharePhoto">
 
     <ImageView
         android:id="@+id/addPhotoImageView"
-        android:layout_width="319dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="36dp"
+        android:layout_gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_gallery" />
-
-    <Button
-        android:id="@+id/shareButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="209dp"
-        android:text="Paylaş"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"/>
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="22dp"
-        android:ems="10"
-        android:hint="Yorum giriniz.."
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:ems="15"
+        android:hint="Yorum giriniz..."
         android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/shareButton"
-        app:layout_constraintStart_toStartOf="@+id/addPhotoImageView"
-        app:layout_constraintTop_toBottomOf="@+id/addPhotoImageView" />
+        android:text="" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_gravity="center"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/border_bold"
+        android:text="Paylaş" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

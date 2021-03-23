@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         signUpButton = findViewById(R.id.signUpButton)
         signInButton = findViewById(R.id.signInButton)
         userText = findViewById(R.id.userText)

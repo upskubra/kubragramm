@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kubragramm.R
 import com.example.kubragramm.model.Post
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recycler_row.view.*
 
 class FeedAdapter(val postList: ArrayList<Post>): RecyclerView.Adapter<FeedAdapter.PostVH>(){
@@ -23,6 +24,7 @@ class FeedAdapter(val postList: ArrayList<Post>): RecyclerView.Adapter<FeedAdapt
     override fun onBindViewHolder(holder: PostVH, position: Int) {
         holder.itemView.recycler_email.text = postList[position].userEmail
         holder.itemView.recycler_comment.text = postList[position].userComment
+        Picasso.get().load(postList[position].photoUrl).into(holder.itemView.recycler_photo)//görsel indirme kütüphanesi
 
     }
 

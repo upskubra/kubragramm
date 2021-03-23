@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/share_photo"
-        android:title="fotoğraf paylaş" />
+        android:title="fotoğraf paylaş"
+        />
     <item
         android:id="@+id/sign_out"
         android:title="çıkış yap"
